@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rock Paper Scissors</title>
+  
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header class="header">
+    <h1>Rock Paper Scissors</h1>
+  </header>
+
+  <main class="game-container">
+    <!-- Choices: aap querySelectorAll(".choice") se JS mein target kar sakti hain -->
+    <div class="choices">
+      <div class="choice" id="rock">
+        <i class="fa-regular fa-hand-back-fist"></i>
+      </div>
+
+      <div class="choice" id="paper">
+        <i class="fa-regular fa-hand"></i>
+      </div>
+
+      <div class="choice" id="scissors">
+        <i class="fa-regular fa-hand-scissors"></i>
+      </div>
+    </div>
+
+    <!-- Score Board -->
+    <div class="score-board">
+      <div class="score">
+        <p id="user-score">0</p>
+        <p>You</p>
+      </div>
+      <div class="score">
+        <p id="comp-score">0</p>
+        <p>Comp</p>
+      </div>
+    </div>
+
+    <!-- Message / Status Box -->
+    <div class="msg-container">
+      <p id="msg">Play your move</p>
+    </div>
+  </main>
+
+  <!-- Script file jahan aap code likhengi -->
+  <script src="script.js"></script>
+</body>
+</html>
