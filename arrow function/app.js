@@ -1,3 +1,4 @@
+// arrow function
 const priceInput = document.getElementById("price");
 const quantityInput = document.getElementById("quantity");
 const result = document.getElementById("result");
