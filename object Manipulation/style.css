@@ -1,0 +1,152 @@
+/* ===== General Styling ===== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f5f3ff;
+    color: #292442;
+    padding: 40px 20px;
+    min-height: 100vh;
+}
+
+/* ===== Main Container ===== */
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+h1 {
+    font-size: 32px;
+    color: #6c4bc1;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.container > p {
+    text-align: center;
+    color: #777;
+    margin-bottom: 35px;
+    font-size: 16px;
+}
+
+/* ===== Student Form ===== */
+
+.student-form {
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 16px;
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-bottom: 35px;
+    box-shadow: 0 5px 25px rgba(80, 60, 130, 0.08);
+}
+
+.student-form input {
+    flex: 1;
+    min-width: 150px;
+    padding: 13px 15px;
+    border: 1px solid #e0dbea;
+    border-radius: 9px;
+    font-size: 14px;
+    background: #fcfbff;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.student-form input:focus {
+    border-color: #8b6bd6;
+}
+
+/* ===== Buttons ===== */
+
+button {
+    border: none;
+    padding: 13px 20px;
+    border-radius: 9px;
+    background: #7654c7;
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.2s;
+}
+
+button:hover {
+    background: #5c3ca8;
+    transform: translateY(-2px);
+}
+
+/* ===== Student Cards Grid ===== */
+
+#studentContainer {
+    display: grid;
+    grid-template-columns: repeat(
+        auto-fit,
+        minmax(240px, 1fr)
+    );
+    gap: 22px;
+}
+
+/* ===== Individual Student Card ===== */
+
+.student-card {
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 16px;
+    border: 1px solid #ece7f8;
+    box-shadow: 0 5px 20px rgba(80, 60, 130, 0.07);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.student-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(80, 60, 130, 0.13);
+}
+
+.student-card h3 {
+    font-size: 20px;
+    color: #6c4bc1;
+    margin-bottom: 16px;
+    overflow-wrap: anywhere;
+}
+
+.student-card p {
+    font-size: 14px;
+    color: #666078;
+    margin: 10px 0;
+    line-height: 1.5;
+}
+
+/* ===== Responsive Design ===== */
+
+@media (max-width: 600px) {
+    body {
+        padding: 25px 15px;
+    }
+
+    h1 {
+        font-size: 26px;
+    }
+
+    .student-form {
+        padding: 18px;
+    }
+
+    .student-form input,
+    .student-form button {
+        width: 100%;
+        flex: auto;
+    }
+
+    #studentContainer {
+        grid-template-columns: 1fr;
+    }
+}
+

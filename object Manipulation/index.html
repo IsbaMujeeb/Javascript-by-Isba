@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Profile Manager</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+
+        <h1>Student Profile Manager</h1>
+        <p>Manage your students easily</p>
+
+        <div class="student-form">
+            <input
+                type="text"
+                id="studentName"
+                placeholder="Student Name"
+            >
+
+            <input
+                type="text"
+                id="studentCourse"
+                placeholder="Course Name"
+            >
+
+            <input
+                type="number"
+                id="studentMarks"
+                placeholder="Marks"
+                min="0"
+                max="100"
+            >
+
+            <button id="addStudentBtn">Add Student</button>
+        </div>
+
+        <div id="studentContainer"></div>
+
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
