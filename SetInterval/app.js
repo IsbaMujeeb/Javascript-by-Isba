@@ -29,21 +29,84 @@ function updateDisplay() {
 }
 
 
-startBtn.addEventListener("click", ()=>{
-    let hours= Number(hoursInput.value);
-    let minutes= Number(minutesInput.value);
-    let seconds= Number(secondsInput.value);
-     totalSeconds= hours*3600 + minutes*60 + seconds;
-     clearInterval(interval);
-     updateDisplay();
 
-        interval= setInterval(()=>{
-            totalSeconds--;
-            updateDisplay();
-             if (totalSeconds <= 0) {
+startBtn.addEventListener("click", () => {
+
+    if (interval !== null) {
+        return;
+    }
+
+    if (totalSeconds === 0) {
+
+        let hours = Number(hoursInput.value);
+        let minutes = Number(minutesInput.value);
+        let seconds = Number(secondsInput.value);
+
+        if (
+            hoursInput.value === "" ||
+            minutesInput.value === "" ||
+            secondsInput.value === "" ||
+            hours < 0 ||
+            minutes < 0 || minutes >= 60 ||
+            seconds < 0 || seconds >= 60
+        ) {
+            message.textContent = "Please enter a valid time!";
+            return;
+        }
+
+        totalSeconds = hours * 3600 + minutes * 60 + seconds;
+
+        if (totalSeconds <= 0) {
+            message.textContent = "Please enter a time greater than zero!";
+            return;
+        }
+    }
+
+    message.textContent = "";
+
+    updateDisplay();
+
+    interval = setInterval(() => {
+
+        totalSeconds--;
+
+        updateDisplay();
+
+        if (totalSeconds <= 0) {
             clearInterval(interval);
+            interval = null;
             message.textContent = "Time is up!";
         }
-        },1000)
 
-})
+    }, 1000);
+
+});
+
+pauseBtn.addEventListener("click", () => {
+
+    clearInterval(interval);
+
+    interval = null;
+
+    message.textContent = "Timer paused!";
+
+});
+
+
+resetBtn.addEventListener("click", () => {
+
+    clearInterval(interval);
+
+    interval = null;
+
+    totalSeconds = 0;
+
+    updateDisplay();
+
+    hoursInput.value = "";
+    minutesInput.value = "";
+    secondsInput.value = "";
+
+    message.textContent = "";
+
+});
