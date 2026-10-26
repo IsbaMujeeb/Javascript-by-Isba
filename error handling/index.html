@@ -1,0 +1,51 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Safe Calculator | Error Handling</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <main class="calculator">
+        <div class="icon">🧮</div>
+
+        <h1>Safe Calculator</h1>
+        <p class="subtitle">Calculate smartly. Handle errors safely.</p>
+
+        <div class="form-group">
+            <label for="num1">First Number</label>
+            <input type="number" id="num1" placeholder="Enter first number">
+        </div>
+
+        <div class="form-group">
+            <label for="operator">Choose Operation</label>
+            <select id="operator">
+                <option value="+">Addition (+)</option>
+                <option value="-">Subtraction (−)</option>
+                <option value="*">Multiplication (×)</option>
+                <option value="/">Division (÷)</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="num2">Second Number</label>
+            <input type="number" id="num2" placeholder="Enter second number">
+        </div>
+
+        <button id="calculateBtn">Calculate Result →</button>
+
+        <div class="result-box">
+            <p class="result-label">YOUR RESULT</p>
+            <h2 id="result">—</h2>
+            <p id="message" aria-live="polite">Your answer will appear here.</p>
+        </div>
+
+        <p class="footer">Built with JavaScript & error handling</p>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>

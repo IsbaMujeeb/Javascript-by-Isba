@@ -1,0 +1,150 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #f3efff, #e5e9ff);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 24px;
+}
+
+.calculator {
+    background: #ffffff;
+    width: 100%;
+    max-width: 420px;
+    padding: 32px;
+    border-radius: 22px;
+    box-shadow: 0 15px 45px rgba(72, 54, 130, 0.12);
+}
+
+.icon {
+    width: 58px;
+    height: 58px;
+    background: #eee8ff;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+h1 {
+    color: #33245f;
+    font-size: 27px;
+    margin-bottom: 8px;
+}
+
+.subtitle {
+    color: #89839a;
+    font-size: 13px;
+    line-height: 1.6;
+    margin-bottom: 28px;
+}
+
+.form-group {
+    margin-bottom: 18px;
+}
+
+label {
+    display: block;
+    color: #44395e;
+    font-size: 13px;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+input,
+select {
+    width: 100%;
+    padding: 13px;
+    border: 1px solid #e4dfef;
+    border-radius: 10px;
+    background: #fbfaff;
+    color: #33245f;
+    font-size: 14px;
+    outline: none;
+    transition: 0.2s ease;
+}
+
+input:focus,
+select:focus {
+    border-color: #8a70db;
+    box-shadow: 0 0 0 3px rgba(138, 112, 219, 0.12);
+}
+
+button {
+    width: 100%;
+    padding: 15px;
+    margin-top: 5px;
+    border: none;
+    border-radius: 11px;
+    background: #7254c7;
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+button:hover {
+    background: #5d40ae;
+    transform: translateY(-2px);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+.result-box {
+    background: #f7f4ff;
+    border: 1px solid #ebe4ff;
+    border-radius: 14px;
+    padding: 20px;
+    margin-top: 24px;
+    text-align: center;
+    overflow-wrap: anywhere;
+}
+
+.result-label {
+    color: #8b7caf;
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+}
+
+.result-box h2 {
+    color: #5135a0;
+    font-size: 32px;
+    margin: 12px 0;
+}
+
+#message {
+    color: #89839a;
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+.footer {
+    color: #aaa3ba;
+    font-size: 11px;
+    text-align: center;
+    margin-top: 22px;
+}
+
+@media (max-width: 400px) {
+    .calculator {
+        padding: 24px 20px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+}
