@@ -1,0 +1,77 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f3f0ff;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.container {
+    background: white;
+    width: 100%;
+    max-width: 420px;
+    padding: 30px;
+    border-radius: 18px;
+    box-shadow: 0 8px 30px rgba(60, 40, 100, 0.1);
+}
+
+h1 {
+    color: #49358c;
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    color: #777;
+    font-size: 14px;
+    line-height: 1.5;
+    margin-bottom: 25px;
+}
+
+.shopping-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #e7e1fa;
+    border-radius: 10px;
+    background: #faf9ff;
+    font-size: 16px;
+    color: #333;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.item:hover {
+    background: #eee8ff;
+    border-color: #a99ae5;
+    transform: translateY(-2px);
+}
+
+.item span {
+    color: #9b83dc;
+    font-size: 14px;
+}
+
+.hint {
+    margin-top: 22px;
+    text-align: center;
+    color: #999;
+    font-size: 12px;
+}
