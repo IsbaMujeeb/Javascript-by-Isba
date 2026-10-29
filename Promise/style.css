@@ -1,0 +1,41 @@
+
+body {
+    font-family: Arial, sans-serif;
+    background: #fff4e8;
+    display: flex;
+    justify-content: center;
+    padding-top: 70px;
+}
+
+.container {
+    background: white;
+    width: 350px;
+    padding: 25px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 4px 15px #00000015;
+}
+
+h1 {
+    color: #c84b31;
+}
+
+button {
+    background: #c84b31;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+#order-process {
+    margin-top: 20px;
+    text-align: left;
+}
+
+#order-process p {
+    background: #fff0e5;
+    padding: 10px;
+    border-radius: 6px;
+}
