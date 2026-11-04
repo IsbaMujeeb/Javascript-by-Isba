@@ -1,0 +1,41 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Notes Saver</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+
+        <div class="header">
+            <h1>My Notes</h1>
+            <p>Save your thoughts, one note at a time.</p>
+        </div>
+
+        <div class="note-form">
+            <input 
+                type="text" 
+                id="noteInput" 
+                placeholder="Write something..."
+            >
+
+            <button id="saveBtn">Save Note</button>
+        </div>
+
+        <div class="notes-section">
+            <h2>Your Notes</h2>
+
+            <ul id="notesList">
+                <!-- Notes will appear here -->
+            </ul>
+        </div>
+
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
