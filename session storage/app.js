@@ -15,7 +15,7 @@ saveBtn.addEventListener("click", function() {
 
 });
 
-let saveName = sessionStorage.getItem("name");
+let saveName = sessionStorage.getItem("name"); //sessionStorage.getItem("name") retrieves the value associated with the key "name" from the session storage. If a name was previously saved, it will be stored in the variable saveName.
 if (saveName) {
     welcome.textContent = "Welcome, " + saveName + "!";
 }
