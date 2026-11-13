@@ -1,0 +1,147 @@
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'DM Sans', sans-serif;
+    background: #e9eee7;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 15px;
+    color: #263b31;
+}
+
+.container {
+    width: 100%;
+    max-width: 620px;
+    background: #fbfaf5;
+    padding: 38px;
+    border-radius: 22px;
+    border: 1px solid #dce4d9;
+    box-shadow: 0 18px 50px rgba(38, 59, 49, 0.10);
+}
+
+h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 32px;
+    color: #203c30;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    text-align: center;
+    color: #829084;
+    font-size: 14px;
+    margin-bottom: 32px;
+}
+
+.form {
+    background: #f0f3ed;
+    padding: 22px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+input {
+    width: 100%;
+    padding: 14px 16px;
+    background: #fff;
+    border: 1px solid #dce4d9;
+    border-radius: 9px;
+    font-size: 14px;
+    font-family: inherit;
+    color: #263b31;
+    outline: none;
+    transition: 0.3s;
+}
+
+input:focus {
+    border-color: #668b70;
+    box-shadow: 0 0 0 3px rgba(102, 139, 112, 0.12);
+}
+
+input::placeholder {
+    color: #a1aca0;
+}
+
+button {
+    padding: 15px;
+    background: #294d3a;
+    color: #fff;
+    border: none;
+    border-radius: 9px;
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #1d382a;
+    transform: translateY(-2px);
+}
+
+.output {
+    margin-top: 28px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    color: #829084;
+    font-size: 14px;
+}
+
+.student-card {
+    background: #f0f3ed;
+    border: 1px solid #dce5d9;
+    border-left: 5px solid #668b70;
+    padding: 22px;
+    border-radius: 12px;
+    color: #294d3a;
+    animation: appear 0.35s ease;
+}
+
+.student-card h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 21px;
+    margin-bottom: 14px;
+}
+
+.student-card p {
+    font-size: 14px;
+    margin: 9px 0;
+    color: #66766a;
+    line-height: 1.5;
+}
+
+@keyframes appear {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 500px) {
+    .container {
+        padding: 24px 18px;
+    }
+
+    h1 {
+        font-size: 26px;
+    }
+}
